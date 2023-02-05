@@ -1,4 +1,5 @@
 import { Component } from "react";
+import css from "./Modal.module.css";
 
 
 export default class Modal extends Component {
@@ -20,8 +21,8 @@ export default class Modal extends Component {
 
     render() {
         return (
-            <div className="Overlay">
-                <div className="Modal">
+            <div className={css.overlay}>
+                <div className={css.modal}>
                     {/* <img src="" alt="" /> */}
                     {this.props.children}
                 </div>
