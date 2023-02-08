@@ -1,8 +1,8 @@
 import { Component } from "react";
-import css from "./Modal.module.css";
+import {Modal, Overlay} from "./Modal.styled"
 
 
-export default class Modal extends Component {
+export default class ModalWrap extends Component {
 
     componentDidMount() {
         // console.log("componentDidMount");
@@ -35,12 +35,12 @@ export default class Modal extends Component {
 
     render() {
         return (
-            <div className={css.overlay} onClick={this.handleBackdropClick}>
-                <div className={css.modal}>
+            <Overlay onClick={this.handleBackdropClick}>
+                <Modal>
                     {/* <img src="" alt="" /> */}
                     {this.props.children}
-                </div>
-            </div>
+                </Modal>
+            </Overlay>
         )
     }
 }

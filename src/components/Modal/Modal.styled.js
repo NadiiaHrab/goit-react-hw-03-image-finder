@@ -1,4 +1,6 @@
-.overlay {
+import styled from 'styled-components';
+
+export const Overlay =  styled.div `
     position: fixed;
     top: 0;
     left: 0;
@@ -9,10 +11,9 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1200;
-}
+`
 
-.modal {
-
+export const Modal = styled.div`
     width: 400px;
     height: 300px;
     background-color: #fff;
@@ -20,4 +21,4 @@
 
     /* max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px); */
-}
+`

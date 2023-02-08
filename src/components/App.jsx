@@ -1,28 +1,41 @@
 import { Component } from "react";
-import Modal from "../components/Modal";
+// import Modal from "../components/Modal";
+import Searchbar from "../components/Searchbar";
+import ImageInfo from "../components/ImageInfo";
+
 
 
 export class App extends Component {
 
   state = {
-    showModal: false,
+    imageName: '',
+
+    // showModal: false,
     
   }
+  handleFormSubmit = imageName => {
+    this.setState({imageName})
+  }
 
-  toggleModal = () => {
-    this.setState(({ showModal }) => ({
-      showModal: !showModal,
-    }))
+  // toggleModal = () => {
+  //   this.setState(({ showModal }) => ({
+  //     showModal: !showModal,
+  //   }))
 
-  };
+  // };
 
 
   render() {
-    const { showModal } = this.state;
+    // const { showModal } = this.state;
 
     return (
       <>
-        <button type="button" onClick={this.toggleModal}>open modal</button>
+        <Searchbar onSubmit={this.handleFormSubmit} />
+        <ImageInfo imageName={this.state.imageName} />
+        
+        
+
+        {/* <button type="button" onClick={this.toggleModal}>open modal</button>
         {showModal && (
           <Modal
             onClose={this.toggleModal}>
@@ -32,7 +45,7 @@ export class App extends Component {
             onClick={this.toggleModal}>
             close modal</button>
         </Modal>
-        )}
+        )} */}
       </>
     )
         
