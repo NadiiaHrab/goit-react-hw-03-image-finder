@@ -22,11 +22,7 @@ export default class ImageInfo extends Component {
             ImageApi.fetchImages(nextImage)
                 .then(image => this.setState({ image, status: 'resolved' }))
                 .catch(error => console.error())
-
-        }
-
-        
-        
+        }  
     }
 
     render() {

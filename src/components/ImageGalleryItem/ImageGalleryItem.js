@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 
-export default function ImageGalleryItem({ id,
-    webformatUR,
-    largeImageURL,
-    tags }) {
+export default function ImageGalleryItem({ webformatUR, tags }) {
     return (
         <>
-            <li class="gallery-item" key={id}>
-                <img src={webformatUR} alt={tags} />
+            <li class="gallery-item">
+                <img
+                    src={webformatUR}
+                    alt={tags} />
             </li>
         </>
 )
@@ -16,7 +15,7 @@ export default function ImageGalleryItem({ id,
 ImageGalleryItem.propTypes = {
     id: PropTypes.number.isRequired,
     webformatUR: PropTypes.string.isRequired,
-    largeImageURL: PropTypes.string.isRequired,
+    // largeImageURL: PropTypes.string.isRequired,
     tags: PropTypes.string.isRequired,
 
 }
