@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import css from "./ImageGallery.module.css";
 import ImageGalleryItem from "../ImageGalleryItem";
 
-export default function ImageGallery({ hits }) {
+export default function ImageGallery({ images }) {
     return (
         <>
             <ul className={css.imageGallery}>
-                {hits.map(({ id, webformatUR, tags }) => (
+                {images.map(({ id, webformatURL, tags }) => (
                     <ImageGalleryItem
                         key={id}
-                        webformatUR={webformatUR}
+                        webformatURL={webformatURL}
                         tags={tags}
 
                     />

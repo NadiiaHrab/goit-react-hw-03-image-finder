@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
-export default function ImageGalleryItem({ webformatUR, tags }) {
+export default function ImageGalleryItem({ webformatURL, tags }) {
     return (
         <>
             <li class="gallery-item">
                 <img
-                    src={webformatUR}
+                    src={webformatURL}
                     alt={tags} />
             </li>
         </>

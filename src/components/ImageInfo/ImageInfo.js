@@ -8,7 +8,9 @@ export default class ImageInfo extends Component {
 
     state = {
         imageName: null,
-        status: "idle"
+        status: "idle",
+        images: [],
+        
         
     }
     
@@ -26,15 +28,14 @@ export default class ImageInfo extends Component {
     }
 
     render() {
-        const {imageName,  status } = this.state;
-        
+        const {status } = this.state;    
           
     if (status === "pending") {
         return <Loader />
         }
 
     if (status === 'resolved') {
-            return <ImageGallery hits={imageName} />
+        return <ImageGallery images={this.state.images} />
         }
                    
     }
